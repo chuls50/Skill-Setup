@@ -1,0 +1,17 @@
+ID,Work Item Type,Title,Test Step,Step Action,Step Expected
+,Test Case,Verify Let's Get Started Screen Display After Login,1,Enter valid credentials in username and password fields,Credentials are entered
+,,,1,Enter valid credentials in username and password fields,Credentials are entered
+,,,2,Click Sign-In button,User is authenticated successfully
+,,,3,Observe screen after authentication,"Let's Get Started" screen is displayed with workflow options
+
+,Test Case,Verify Patient Consultation Option Display,1,Observe workflow options on Let's Get Started screen,Patient Consultation option is displayed
+,,,1,Observe workflow options on Let's Get Started screen,Patient Consultation option is displayed
+
+,Test Case,Verify Direct-to-Patient Exam Option Display,1,Observe workflow options on Let's Get Started screen,Direct-to-Patient Exam option is displayed
+,,,1,Observe workflow options on Let's Get Started screen,Direct-to-Patient Exam option is displayed
+
+,Test Case,Verify Video Conference Option Display,1,Observe workflow options on Let's Get Started screen,Video Conference option is displayed
+,,,1,Observe workflow options on Let's Get Started screen,Video Conference option is displayed
+
+,Test Case,Verify Patient Consultation Navigation,1,Click Patient Consultation option on Let's Get Started screen,Application navigates to Select Patient screen
+,,,1,Click Patient Consultation option on Let's Get Started screen,Application navigates to Select Patient screen

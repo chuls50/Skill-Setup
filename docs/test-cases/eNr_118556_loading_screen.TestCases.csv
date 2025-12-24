@@ -1,0 +1,18 @@
+ID,Work Item Type,Title,Test Step,Step Action,Step Expected
+,Test Case,Verify Loading Screen Display on Launch,1,Launch eNcounter from the desktop shortcut,Desktop shortcut is clicked and application begins launching
+,,,1,Launch eNcounter from the desktop shortcut,Desktop shortcut is clicked and application begins launching
+,,,2,Observe the application window as it opens,Application window opens
+,,,3,Observe the loading screen,Loading screen is visible to the user
+
+,Test Case,Verify Successful Loading Completion and Navigation,1,Launch eNcounter from desktop shortcut,Application launches and loading screen is displayed
+,,,1,Launch eNcounter from desktop shortcut,Application launches and loading screen is displayed
+,,,2,Monitor the loading process,Loading process runs without errors
+,,,3,Wait for loading to complete,Loading process completes successfully
+,,,4,Observe the screen after loading completes,Application navigates to the Welcome/Log In screen
+
+,Test Case,Verify Error Display on Unsuccessful Loading,1,Simulate a loading failure condition,Failure condition is created
+,,,1,Simulate a loading failure condition,Failure condition is created
+,,,2,Launch eNcounter from desktop shortcut,Application launches and loading screen is displayed
+,,,3,Monitor the loading process,Loading process encounters an error
+,,,4,Wait for loading to complete,Loading process completes unsuccessfully
+,,,5,Observe error handling,Application displays an error message to the user

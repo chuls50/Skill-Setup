@@ -1,0 +1,25 @@
+# eNcounter Refresh: Loading Screen Feature Test Plan
+
+## Requirements Analysis
+
+| Scenario Name | Requirement | Test Case |
+|---------------|-------------|-----------|
+| Scenario 1: Application loading screen is displayed | 1.1 Loading screen should be visible when the application window opens | 1.1.1 Verify the loading screen is displayed when launching eNcounter from desktop shortcut |
+|  | 1.2 Loading screen should appear after the application window opens | 1.2.1 Verify loading screen is visible after the application window opens |
+|
+| Scenario 2: Application loading screen completes successfully | 2.1 Loading process should complete successfully | 2.1.1 Verify the loading process completes without errors |
+|  | 2.2 Application should navigate to Welcome/Log In screen after successful load | 2.2.1 Verify application navigates to Welcome/Log In screen when loading completes successfully |
+|
+| Scenario 3: Application loading screen completes unsuccessfully | 3.1 Loading process should detect unsuccessful completion | 3.1.1 Verify the system detects when loading fails |
+|  | 3.2 Application should display an error when loading fails | 3.2.1 Verify an error message is displayed to the user when loading completes unsuccessfully |
+
+## Detailed Test Cases
+
+| Test Case ID | Test Scenario | Expected Result | Test Data |
+|--------------|---------------|-----------------|-----------|
+| 1.1.1 | Launch eNcounter from desktop shortcut | Application window opens and loading screen is visible to the user | Desktop shortcut |
+| 1.2.1 | Observe the application window after launch | Loading screen is visible after the application window opens | N/A |
+| 2.1.1 | Monitor loading process during successful startup | Loading process completes without errors | N/A |
+| 2.2.1 | Complete loading process successfully | Application navigates to the Welcome/Log In screen | N/A |
+| 3.1.1 | Monitor loading process during unsuccessful startup | System detects loading failure | Simulated loading failure condition |
+| 3.2.1 | Allow loading process to fail | Error message is displayed to the user | Simulated loading failure condition |
