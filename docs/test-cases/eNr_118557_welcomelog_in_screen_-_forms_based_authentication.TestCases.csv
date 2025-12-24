@@ -1,46 +1,24 @@
 ID,Work Item Type,Title,Test Step,Step Action,Step Expected
-,Test Case,Verify Forms-Based Welcome Screen Display,1,Launch application configured for forms-based authentication,Forms-based welcome screen is displayed with all required components
-,,,1,Launch application configured for forms-based authentication,Forms-based welcome screen is displayed with all required components
-
-,Test Case,Verify Username Field Presence,1,Observe welcome screen for username field,Username field is present and visible
-,,,1,Observe welcome screen for username field,Username field is present and visible
-
-,Test Case,Verify Password Field Presence,1,Observe welcome screen for password field,Password field is present and visible
-,,,1,Observe welcome screen for password field,Password field is present and visible
-
-,Test Case,Verify Sign-In Button Presence,1,Observe welcome screen for Sign-In button,Sign-In/Log-in button is present and visible
-,,,1,Observe welcome screen for Sign-In button,Sign-In/Log-in button is present and visible
-
-,Test Case,Verify Forgot Password Button Presence,1,Observe welcome screen for forgot password button,'Forgot your password?' button is present and visible
-,,,1,Observe welcome screen for forgot password button,'Forgot your password?' button is present and visible
-
-,Test Case,Verify Microsoft Sign-In Button Presence,1,Observe welcome screen for Microsoft sign-in button,Sign in with Microsoft button is present and visible
-,,,1,Observe welcome screen for Microsoft sign-in button,Sign in with Microsoft button is present and visible
-
-,Test Case,Verify Device Clearing Message Display,1,Observe welcome screen for device clearing message,Message "Please ensure you have cleared all devices of previous patient data." is displayed
-,,,1,Observe welcome screen for device clearing message,Message "Please ensure you have cleared all devices of previous patient data." is displayed
-
-,Test Case,Verify Emergency Button Presence,1,Observe welcome screen for emergency button,'Is this an Emergency?' button is present and visible
-,,,1,Observe welcome screen for emergency button,'Is this an Emergency?' button is present and visible
-
-,Test Case,Verify Copyright Text Display,1,Observe welcome screen for copyright text,Copyright text is displayed on the screen
-,,,1,Observe welcome screen for copyright text,Copyright text is displayed on the screen
+,Test Case,Verify All Welcome Screen Components Display,1,Launch application configured for forms-based authentication,Application starts successfully
+,,,1,Launch application configured for forms-based authentication,Application starts successfully
+,,,2,Observe welcome screen for all required components,Username field is present and visible
+,,,3,Verify password field presence,Password field is present and visible
+,,,4,Verify Sign-In button presence,Sign-In/Log-in button is present and visible
+,,,5,Verify forgot password button presence,'Forgot your password?' button is present and visible
+,,,6,Verify Microsoft sign-in button presence,Sign in with Microsoft button is present and visible
+,,,7,Verify device clearing message display,Message "Please ensure you have cleared all devices of previous patient data." is displayed
+,,,8,Verify emergency button presence,'Is this an Emergency?' button is present and visible
+,,,9,Verify copyright text display,Copyright text is displayed on the screen
 
 ,Test Case,Verify Successful Authentication Navigation,1,Enter valid username and password in respective fields,Credentials are entered
 ,,,1,Enter valid username and password in respective fields,Credentials are entered
 ,,,2,Click Sign-In button,Application navigates to patient intake screen
 
-,Test Case,Verify Failed Authentication Error Display,1,Enter invalid username and password in respective fields,Credentials are entered
+,Test Case,Verify Failed Authentication Error Handling,1,Enter invalid username and password in respective fields,Credentials are entered
 ,,,1,Enter invalid username and password in respective fields,Credentials are entered
 ,,,2,Click Sign-In button,Error message is displayed to the user
-
-,Test Case,Verify Failed Authentication Field Highlighting,1,Enter invalid credentials and click Sign-In,Authentication fails
-,,,1,Enter invalid credentials and click Sign-In,Authentication fails
-,,,2,Observe username and password fields,Username and password fields are highlighted red with alert icon
-
-,Test Case,Verify Error Message Close Functionality,1,Trigger authentication error,Error message is displayed
-,,,1,Trigger authentication error,Error message is displayed
-,,,2,Click "x" on error message,Error message closes and is no longer visible
+,,,3,Observe username and password fields,Username and password fields are highlighted red with alert icon
+,,,4,Click "x" on error message,Error message closes and is no longer visible
 
 ,Test Case,Verify Forgot Password Navigation,1,Click 'Forgot your password?' button on welcome screen,Application navigates to forgot/change password screen
 ,,,1,Click 'Forgot your password?' button on welcome screen,Application navigates to forgot/change password screen
@@ -54,8 +32,8 @@ ID,Work Item Type,Title,Test Step,Step Action,Step Expected
 ,Test Case,Verify ClearSteth License Welcome Screen,1,Launch application on host machine with active ClearSteth license,ClearSteth variant of welcome/log in screen is displayed
 ,,,1,Launch application on host machine with active ClearSteth license,ClearSteth variant of welcome/log in screen is displayed
 
-,Test Case,Verify Device Clearing Message on eNcounter Screen,1,Launch eNcounter application and observe welcome screen,Message about clearing devices of previous patient data is displayed
-,,,1,Launch eNcounter application and observe welcome screen,Message about clearing devices of previous patient data is displayed
+,Test Case,Verify Device Clearing Message on eNcounter Screen,1,Launch eNcounter application and observe welcome screen,Message "Please ensure you have cleared all devices of previous patient data." is displayed
+,,,1,Launch eNcounter application and observe welcome screen,Message "Please ensure you have cleared all devices of previous patient data." is displayed
 
 ,Test Case,Verify Sign in With Microsoft Option on eNcounter Screen,1,Launch eNcounter application and observe welcome screen,"Sign in With Microsoft" option is available
 ,,,1,Launch eNcounter application and observe welcome screen,"Sign in With Microsoft" option is available

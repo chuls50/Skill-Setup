@@ -1,0 +1,119 @@
+ID,Work Item Type,Title,Test Step,Step Action,Step Expected
+,Test Case,Verify All Select Patient Screen Elements Display,1,Authenticate successfully with valid credentials,User is authenticated
+,,,1,Authenticate successfully with valid credentials,User is authenticated
+,,,2,Start Patient Consultation workflow,Patient Consultation workflow begins
+,,,3,Observe Select Patient screen for all required elements,Search form is displayed with First Name field
+,,,4,Verify Last Name field presence,Last Name field is displayed
+,,,5,Verify Date of Birth field presence,Date of Birth field is displayed
+,,,6,Verify Medical Record Number field presence,Medical Record Number field is displayed
+,,,7,Verify Patient ID field presence,Patient ID field is displayed
+,,,8,Verify Alternative ID field presence,Alternative ID field is displayed
+,,,9,Verify Clear button presence,Clear button is displayed
+,,,10,Verify Search button presence,Search button is displayed
+,,,11,Verify Search results area presence,Search results area is displayed
+,,,12,Verify Navigation bar presence,Navigation bar is displayed at the top
+,,,13,Verify Include DICOM Worklist toggle presence,Include DICOM Worklist toggle is displayed
+,,,14,Verify Cancel button presence,Cancel button is displayed
+,,,15,Verify Continue button presence,Continue button is displayed
+
+,Test Case,Verify Search Returns and Displays Patients with Complete Information,1,Enter search criteria that matches existing patients,Search criteria is entered
+,,,1,Enter search criteria that matches existing patients,Search criteria is entered
+,,,2,Click Search button,Search executes
+,,,3,Observe search results list,List of matching patients is displayed
+,,,4,Verify patient display includes Patient Name,Patient Name is shown for each result
+,,,5,Verify patient display includes DOB and Age,DOB and Age are shown for each result
+,,,6,Verify patient display includes Gender,Gender is shown for each result
+,,,7,Verify patient display includes Profile avatar,Profile avatar is shown for each result
+,,,8,Verify patient display includes Dropdown arrow,Dropdown arrow is shown for each result
+
+,Test Case,Verify No Results Message and Create Patient Button for Unmatched Search,1,Enter search criteria that does not match any patients,Unmatched search criteria is entered
+,,,1,Enter search criteria that does not match any patients,Unmatched search criteria is entered
+,,,2,Click Search button,Search executes with no matches
+,,,3,Observe results area,No results found message is displayed
+,,,4,Verify Create Patient button appears,Create Patient button is visible
+
+,Test Case,Verify Error Handling Displays No Results Message and Create Patient Button,1,Trigger search failure condition,Search failure occurs
+,,,1,Trigger search failure condition,Search failure occurs
+,,,2,Observe results area,No results found message is displayed
+,,,3,Verify Create Patient button appears,Create Patient button is visible
+
+,Test Case,Verify First Name Field Validation,1,Enter invalid characters in First Name field (e.g. 123),Invalid input is entered
+,,,1,Enter invalid characters in First Name field (e.g. 123),Invalid input is entered
+,,,2,Observe validation feedback,Validation error message is displayed
+,,,3,Enter valid characters in First Name field (e.g. John),Valid input is entered
+,,,4,Observe validation feedback,Input is accepted without error
+
+,Test Case,Verify Last Name Field Validation,1,Enter invalid characters in Last Name field (e.g. ###),Invalid input is entered
+,,,1,Enter invalid characters in Last Name field (e.g. ###),Invalid input is entered
+,,,2,Observe validation feedback,Validation error message is displayed
+,,,3,Enter valid characters in Last Name field (e.g. Smith),Valid input is entered
+,,,4,Observe validation feedback,Input is accepted without error
+
+,Test Case,Verify Date of Birth Field Validation,1,Enter invalid date format in Date of Birth field (e.g. 13/45/2020),Invalid format is entered
+,,,1,Enter invalid date format in Date of Birth field (e.g. 13/45/2020),Invalid format is entered
+,,,2,Observe validation feedback,Validation error message is displayed
+,,,3,Enter valid date format (e.g. 01/15/1990),Valid format is entered
+,,,4,Observe validation feedback,Input is accepted without error
+
+,Test Case,Verify Medical Record Number Field Validation,1,Enter invalid characters in Medical Record Number field (e.g. !@#$%),Invalid input is entered
+,,,1,Enter invalid characters in Medical Record Number field (e.g. !@#$%),Invalid input is entered
+,,,2,Observe validation feedback,Validation error message is displayed
+,,,3,Enter valid characters in Medical Record Number field (e.g. MRN123456),Valid input is entered
+,,,4,Observe validation feedback,Input is accepted without error
+
+,Test Case,Verify Clear Button Resets All Search Form Fields,1,Enter data in First Name field,Data is entered
+,,,1,Enter data in First Name field,Data is entered
+,,,2,Enter data in Last Name field,Data is entered
+,,,3,Enter data in Date of Birth field,Data is entered
+,,,4,Click Clear button,Clear button is clicked
+,,,5,Observe all search fields,All search fields are cleared and reset to empty state
+
+,Test Case,Verify Patient Selection Marks Patient and Opens Information Dropdown,1,Enter search criteria and click Search to get results,Search results are displayed
+,,,1,Enter search criteria and click Search to get results,Search results are displayed
+,,,2,Click on a patient from the results list,Patient is selected
+,,,3,Observe selected patient state,Patient is marked as selected in the list
+,,,4,Observe patient information dropdown,Patient information dropdown opens for selected patient
+
+,Test Case,Verify Continue Button Activates After Patient Selection,1,Select a patient from search results,Patient is selected
+,,,1,Select a patient from search results,Patient is selected
+,,,2,Open patient information dropdown,Dropdown is opened
+,,,3,Click Select Patient option in dropdown,Select Patient is clicked
+,,,4,Observe Continue button in navigation stepper,Continue button becomes active
+
+,Test Case,Verify Navigation Stepper Shows Select Patient Step,1,Authenticate successfully with valid credentials,User is authenticated
+,,,1,Authenticate successfully with valid credentials,User is authenticated
+,,,2,Start Patient Consultation workflow,Workflow begins
+,,,3,Observe navigation stepper,Navigation stepper indicates user is on Select Patient step
+
+,Test Case,Verify Cancel Button Returns to Let's Get Started and Cancels Consult,1,Navigate to Select Patient screen,Select Patient screen is displayed
+,,,1,Navigate to Select Patient screen,Select Patient screen is displayed
+,,,2,Click Cancel button in navigation stepper,Cancel button is clicked
+,,,3,Observe navigation,User returns to Let's Get Started screen
+,,,4,Verify consult status,Consult is canceled
+
+,Test Case,Verify Continue Button Navigates to Enter Symptoms Screen,1,Select a patient from search results,Patient is selected and Continue button is active
+,,,1,Select a patient from search results,Patient is selected and Continue button is active
+,,,2,Click Continue button,Continue button is clicked
+,,,3,Observe navigation,Application navigates to Enter Symptoms screen
+
+,Test Case,Verify Back Button Is Not Displayed on Select Patient Screen,1,Navigate to Select Patient screen,Select Patient screen is displayed
+,,,1,Navigate to Select Patient screen,Select Patient screen is displayed
+,,,2,Observe available navigation buttons,Back button is not present on the screen
+
+,Test Case,Verify DICOM Worklist Toggle Replaces Alternative ID with Accession ID,1,Navigate to Select Patient screen,Select Patient screen is displayed
+,,,1,Navigate to Select Patient screen,Select Patient screen is displayed
+,,,2,Toggle Include DICOM Worklist to ON position,Toggle is switched on
+,,,3,Observe Alternative ID field,Alternative ID field is replaced with Accession ID field
+,,,4,Verify search functionality,User has ability to search by Accession ID
+
+,Test Case,Verify Search Works Without Accession ID When DICOM Toggle Is On,1,Navigate to Select Patient screen and toggle DICOM Worklist ON,DICOM Worklist is enabled
+,,,1,Navigate to Select Patient screen and toggle DICOM Worklist ON,DICOM Worklist is enabled
+,,,2,Leave Accession ID field blank,Accession ID remains empty
+,,,3,Enter search criteria in other fields (e.g. First Name),Other search criteria is entered
+,,,4,Click Search button,Search executes successfully
+,,,5,Verify search results,Accession ID was not used as search criteria and results are returned based on other fields
+
+,Test Case,Verify Create Patient Button and Placeholder Message Display on Load,1,Navigate to Select Patient screen on initial load,Select Patient screen is displayed
+,,,1,Navigate to Select Patient screen on initial load,Select Patient screen is displayed
+,,,2,Observe Patient Search Results area,Create Patient button is visible
+,,,3,Verify placeholder message,Message "Patient search results will appear here" is displayed above Create Patient button
