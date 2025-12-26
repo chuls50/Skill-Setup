@@ -1,0 +1,40 @@
+# eNcounter Refresh: Enter Symptoms Feature Test Plan
+
+## Requirements Analysis
+
+| Scenario Name | Requirement | Test Case |
+|---------------|-------------|-----------|
+| Scenario 1: Enter Symptoms Screen | 1.1 Enter Symptoms screen should display all required elements after patient selection | 1.1.1 Verify all Enter Symptoms screen elements display correctly |
+|
+| Scenario 2: Symptoms Entered | 2.1 Symptoms field should support autocomplete selection of symptoms | 2.1.1 Verify symptom autocomplete selection functionality |
+|
+| Scenario 3: Symptoms Removed | 3.1 Selected symptoms should be removable individually | 3.1.1 Verify individual symptom removal functionality |
+|
+| Scenario 4: Symptoms Cleared | 4.1 All symptoms should be clearable with clear all button | 4.1.1 Verify clear all button removes all symptoms |
+|
+| Scenario 5: Number Input Validation | 5.1 Number field should validate numeric input only | 5.1.1 Verify number field validation with valid and invalid inputs |
+|
+| Scenario 6: Estimated Time Period | 6.1 Time period selector should allow single selection from available options | 6.1.1 Verify time period selection (hours, days, months, years) |
+|
+| Scenario 7: Navigation Updated | 7.1 Navigation stepper should indicate Enter Symptoms step as active with previous steps complete | 7.1.1 Verify navigation stepper shows Enter Symptoms step correctly |
+|
+| Scenario 8: Cancel | 8.1 Cancel button should navigate to Let's Get Started screen | 8.1.1 Verify Cancel button navigates to Let's Get Started screen |
+|
+| Scenario 9: Back | 9.1 Back button should navigate to Select Patient screen | 9.1.1 Verify Back button navigates to Select Patient screen |
+|
+| Scenario 10: Continue | 10.1 Continue button should navigate to Capture Vitals screen after symptoms entered | 10.1.1 Verify Continue button navigates to Capture Vitals screen |
+
+## Detailed Test Cases
+
+| Test Case ID | Test Scenario | Expected Result | Test Data |
+|--------------|---------------|-----------------|-----------|
+| 1.1.1 | Complete Patient Consultation workflow to patient selection, then observe Enter Symptoms screen | Screen displays with Patient symptoms field, Estimated time period selector, Number field, Navigation bar, Cancel button, Back button, and Continue button | Patient selected from previous step |
+| 2.1.1 | Type text into symptoms field, observe autocomplete list, and select an item | Symptoms field displays matching items list, selected item is indicated as selected in the field | Text: "head" |
+| 3.1.1 | Enter a symptom, click the symptom for removal, and observe symptoms list | Symptom is removed from the list of selected symptoms | Symptom: "headache" |
+| 4.1.1 | Enter multiple symptoms, click clear all button, and observe symptoms list | All symptoms are removed from the list of selected symptoms | Multiple symptoms entered |
+| 5.1.1 | Enter invalid non-numeric input in number field and observe validation, then enter valid numeric input | Invalid input shows validation error, valid numeric input is accepted | Invalid: "abc", Valid: "3" (Regex: ^\d+) |
+| 6.1.1 | Select hours option, then select days option, and observe selection state for each | Only the currently selected time period option is indicated as selected | Options: hours, days, months, years |
+| 7.1.1 | Navigate from patient selection to Enter Symptoms screen and observe navigation stepper | Navigation stepper shows Enter Symptoms step as active and previous steps as complete | Patient selected |
+| 8.1.1 | Navigate to Enter Symptoms screen, click Cancel button, and observe navigation | Application navigates to Let's Get Started screen | N/A |
+| 9.1.1 | Navigate to Enter Symptoms screen, click Back button, and observe navigation | Application navigates back to Select Patient screen | N/A |
+| 10.1.1 | Enter symptoms in symptoms field, click Continue button, and observe navigation | Application navigates to Capture Vitals screen | Symptoms entered: "headache" |

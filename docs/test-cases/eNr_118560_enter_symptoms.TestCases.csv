@@ -1,0 +1,60 @@
+ID,Work Item Type,Title,Test Step,Step Action,Step Expected
+,Test Case,Verify All Enter Symptoms Screen Elements Display,1,Complete Patient Consultation workflow and select a patient,Patient is selected
+,,,1,Complete Patient Consultation workflow and select a patient,Patient is selected
+,,,2,Observe Enter Symptoms screen for all required elements,Patient symptoms field is displayed
+,,,3,Verify Estimated time period selector presence,Estimated time period selector is displayed
+,,,4,Verify Number field presence,Number field is displayed
+,,,5,Verify Navigation bar presence,Navigation bar is displayed at the top
+,,,6,Verify Cancel button presence,Cancel button is displayed
+,,,7,Verify Back button presence,Back button is displayed
+,,,8,Verify Continue button presence,Continue button is displayed
+
+,Test Case,Verify Symptom Autocomplete Selection Functionality,1,Type text into symptoms field (e.g. head),Text is entered in symptoms field
+,,,1,Type text into symptoms field (e.g. head),Text is entered in symptoms field
+,,,2,Observe autocomplete list,Symptoms field displays list of matching items
+,,,3,Select an item from the list (e.g. headache),Item is selected
+,,,4,Observe symptoms field,Selected symptom is indicated as selected in the field
+
+,Test Case,Verify Individual Symptom Removal Functionality,1,Enter a symptom in the symptoms field (e.g. headache),Symptom is added to selected symptoms list
+,,,1,Enter a symptom in the symptoms field (e.g. headache),Symptom is added to selected symptoms list
+,,,2,Click the symptom to remove it,Symptom removal action is triggered
+,,,3,Observe selected symptoms list,Symptom is removed from the list
+
+,Test Case,Verify Clear All Button Removes All Symptoms,1,Enter multiple symptoms in the symptoms field,Multiple symptoms are added to selected list
+,,,1,Enter multiple symptoms in the symptoms field,Multiple symptoms are added to selected list
+,,,2,Click clear all button,Clear all action is triggered
+,,,3,Observe selected symptoms list,All symptoms are removed from the list
+
+,Test Case,Verify Number Field Validation,1,Enter invalid non-numeric input in number field (e.g. abc),Invalid input is entered
+,,,1,Enter invalid non-numeric input in number field (e.g. abc),Invalid input is entered
+,,,2,Observe validation feedback,Input validation error is displayed
+,,,3,Enter valid numeric input in number field (e.g. 3),Valid input is entered
+,,,4,Observe validation feedback,Input is accepted without error
+
+,Test Case,Verify Time Period Selection,1,Click hours option in time period selector,Hours is selected
+,,,1,Click hours option in time period selector,Hours is selected
+,,,2,Observe selection state,Only hours option is indicated as selected
+,,,3,Click days option in time period selector,Days is selected
+,,,4,Observe selection state,Only days option is indicated as selected (hours is deselected)
+,,,5,Verify months and years options work similarly,Each option can be selected exclusively
+
+,Test Case,Verify Navigation Stepper Shows Enter Symptoms Step,1,Navigate from patient selection to Enter Symptoms screen,Enter Symptoms screen is displayed
+,,,1,Navigate from patient selection to Enter Symptoms screen,Enter Symptoms screen is displayed
+,,,2,Observe navigation stepper,Navigation stepper indicates Enter Symptoms step as active
+,,,3,Verify previous steps status,Previous steps are shown as complete
+
+,Test Case,Verify Cancel Button Navigates to Let's Get Started Screen,1,Navigate to Enter Symptoms screen,Enter Symptoms screen is displayed
+,,,1,Navigate to Enter Symptoms screen,Enter Symptoms screen is displayed
+,,,2,Click Cancel button,Cancel button is clicked
+,,,3,Observe navigation,Application navigates to Let's Get Started screen
+
+,Test Case,Verify Back Button Navigates to Select Patient Screen,1,Navigate to Enter Symptoms screen,Enter Symptoms screen is displayed
+,,,1,Navigate to Enter Symptoms screen,Enter Symptoms screen is displayed
+,,,2,Click Back button,Back button is clicked
+,,,3,Observe navigation,Application navigates back to Select Patient screen
+
+,Test Case,Verify Continue Button Navigates to Capture Vitals Screen,1,Navigate to Enter Symptoms screen,Enter Symptoms screen is displayed
+,,,1,Navigate to Enter Symptoms screen,Enter Symptoms screen is displayed
+,,,2,Enter symptoms in symptoms field (e.g. headache),Symptoms are entered
+,,,3,Click Continue button,Continue button is clicked
+,,,4,Observe navigation,Application navigates to Capture Vitals screen

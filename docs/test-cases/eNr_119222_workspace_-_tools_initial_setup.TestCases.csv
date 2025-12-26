@@ -1,0 +1,80 @@
+ID,Work Item Type,Title,Test Step,Step Action,Step Expected
+,Test Case,Verify Toolbar Expansion from Collapsed State,1,Launch the application and navigate to the workspace,Workspace is displayed with toolbar in collapsed state
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed with toolbar in collapsed state
+,,,2,Verify toolbar is initially collapsed,Toolbar is in collapsed state
+,,,3,Click the toolbar,Toolbar is clicked
+,,,4,Observe the toolbar state,Toolbar expands
+,,,5,Verify the Take Snapshot button is displayed,Take Snapshot button is visible in the expanded toolbar
+
+,Test Case,Verify Toolbar Collapse from Expanded State,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,2,Expand the toolbar if collapsed,Toolbar is in expanded state
+,,,3,Verify toolbar is expanded,Toolbar shows buttons including Take Snapshot
+,,,4,Click the toolbar collapse icon,Collapse icon is clicked
+,,,5,Observe the toolbar state,Toolbar collapses to its original state
+
+,Test Case,Verify Toolbar Toggle Functionality,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,2,Click the toolbar to expand it,Toolbar expands
+,,,3,Click the toolbar collapse icon,Toolbar collapses
+,,,4,Click the toolbar to expand it again,Toolbar expands again
+,,,5,Verify consistent behavior,Toolbar can be toggled between expanded and collapsed states consistently
+
+,Test Case,Verify Capture Image Button Functionality with Selected Exam Camera,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,2,Select an exam camera in the Devices component,Exam camera is selected and stream is active
+,,,3,Expand the toolbar,Toolbar expands showing Take Snapshot button
+,,,4,Click the Capture Image button,Capture Image button is clicked
+,,,5,Observe the image capture,Last frame from exam camera stream is captured
+,,,6,Verify image is added to evidence tray,Captured image appears in the evidence tray
+,,,7,Verify image is shared in videoconference,Captured image is shared in the active videoconference session
+
+,Test Case,Verify Capture Image Button - Image Added to Evidence Tray,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,2,Select an exam camera in the Devices component,Exam camera is selected and stream is active
+,,,3,Expand the toolbar,Toolbar expands showing Take Snapshot button
+,,,4,Note the current state of the evidence tray,Evidence tray state is observed
+,,,5,Click the Capture Image button,Capture Image button is clicked
+,,,6,Observe the evidence tray,New image is added to the evidence tray
+,,,7,Verify image quality and content,Captured image shows the last frame from the exam camera stream
+
+,Test Case,Verify Capture Image Button - Image Shared in Videoconference,1,Launch the application and ensure an active videoconference session,Active videoconference session is running
+,,,1,Launch the application and ensure an active videoconference session,Active videoconference session is running
+,,,2,Navigate to the workspace,Workspace is displayed
+,,,3,Select an exam camera in the Devices component,Exam camera is selected and stream is active
+,,,4,Expand the toolbar,Toolbar expands showing Take Snapshot button
+,,,5,Click the Capture Image button,Capture Image button is clicked
+,,,6,Observe the image capture,Image is captured from exam camera stream
+,,,7,Verify image sharing in videoconference,Captured image is shared with all participants in the active videoconference session
+
+,Test Case,Verify Capture Image Button - No Exam Camera Selected,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,2,Ensure no exam camera is selected in Devices component,No exam camera is selected
+,,,3,Expand the toolbar,Toolbar expands showing Take Snapshot button
+,,,4,Click the Capture Image button,Capture Image button is clicked
+,,,5,Observe the application behavior,Application handles the scenario appropriately (button disabled or error message displayed)
+
+,Test Case,Verify Capture Image Button - Multiple Captures,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,2,Select an exam camera in the Devices component,Exam camera is selected and stream is active
+,,,3,Expand the toolbar,Toolbar expands showing Take Snapshot button
+,,,4,Click the Capture Image button,First image is captured
+,,,5,Verify first image is added to evidence tray,First image appears in evidence tray
+,,,6,Click the Capture Image button again,Second image is captured
+,,,7,Verify second image is added to evidence tray,Second image appears in evidence tray
+,,,8,Verify both images are present,Both captured images are present in the evidence tray
+
+,Test Case,Verify Toolbar State Persistence During Session,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,2,Expand the toolbar,Toolbar is expanded
+,,,3,Navigate away from the workspace,User leaves the workspace view
+,,,4,Navigate back to the workspace,User returns to the workspace view
+,,,5,Observe the toolbar state,Toolbar maintains its expanded state
+
+,Test Case,Verify Capture Image Button with Inactive Camera Stream,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,1,Launch the application and navigate to the workspace,Workspace is displayed
+,,,2,Select an exam camera in the Devices component,Exam camera is selected
+,,,3,Stop or disconnect the camera stream,Camera stream becomes inactive
+,,,4,Expand the toolbar,Toolbar expands showing Take Snapshot button
+,,,5,Click the Capture Image button,Capture Image button is clicked
+,,,6,Observe the application behavior,Application handles inactive stream appropriately (error message or button disabled)
